@@ -141,6 +141,9 @@
             handleSubmit(){
                 this.isSubmitted = true;
             }
+        },
+        destroyed(){
+            console.log("Destroyed");
         }
     }
 </script>

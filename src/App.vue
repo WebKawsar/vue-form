@@ -4,7 +4,9 @@
     <button @click="CompToRender='About'">About</button>
     <button @click="CompToRender='Form'">Contact</button>
 
-    <component :is="CompToRender"></component>
+    <keep-alive>
+      <component :is="CompToRender"></component>
+    </keep-alive>
 
 
   </div>
