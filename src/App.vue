@@ -1,25 +1,32 @@
 <template>
-  <div>
-    <button @click="CompToRender='Home'">Home</button>
+  <div class="container">
+
+    <!-- <button @click="CompToRender='Home'">Home</button>
     <button @click="CompToRender='About'">About</button>
     <button @click="CompToRender='Form'">Contact</button>
 
     <keep-alive>
       <component :is="CompToRender"></component>
-    </keep-alive>
+    </keep-alive> -->
+<!-- 
+    <p v-awesome:green="'Hello Boss'"></p>
+    <p v-awesome:red="'Hello Boss'"></p> -->
 
+    <p v-awesome.green.big="'Hello Boss'"></p>
+    <p v-awesome.red.small="'Hello Boss'"></p>
 
   </div>
 </template>
 
 <script>
 
-import Form from "./Components/Form/Form";
+
 import "bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Home from "./Components/Home/Home";
-import About from "./Components/About/About";
+// import Form from "./Components/Form/Form";
+// import Home from "./Components/Home/Home";
+// import About from "./Components/About/About";
 
 export default {
   data(){
@@ -27,11 +34,11 @@ export default {
         CompToRender: "Home"
     }
   },
-  components: {
-    Form,
-    Home,
-    About
-  }
+  // components: {
+  //   Form,
+  //   Home,
+  //   About
+  // }
 }
 </script>
 
