@@ -14,6 +14,9 @@
 
     <p v-awesome.green.big="'Hello Boss'"></p>
     <p v-awesome.red.small="'Hello Boss'"></p>
+    <hr>
+
+    <div v-user="userName"></div>
 
   </div>
 </template>
@@ -31,8 +34,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default {
   data(){
     return {
-        CompToRender: "Home"
+        CompToRender: "Home",
+        userName: "Kawsar Ahmed"
     }
+  },
+  directives: {
+      "user": {
+        bind(el, binding){
+          el.innerHTML = binding.value
+        }
+      }
   },
   // components: {
   //   Form,
@@ -40,6 +51,7 @@ export default {
   //   About
   // }
 }
+
 </script>
 
 <style>
